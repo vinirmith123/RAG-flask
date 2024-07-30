@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PDF Query Application</title>
+</head>
+<body>
+    <h1>PDF Query Application</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_files" multiple>
+        <br><br>
+        <textarea name="query" rows="4" cols="50" placeholder="Ask a question about the PDFs..."></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
